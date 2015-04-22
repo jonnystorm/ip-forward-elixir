@@ -47,7 +47,7 @@ defmodule IPForward.IPCIDRRouteTable do
 
       SNMPMIB.object(oid, type, ipCidrRouteEntry.ipCidrRouteMask)
     end
-    def ipCidrRouteMask(ipCidrRouteMask, value) when is_binary(value) do
+    def ipCidrRouteMask(ipCidrRouteEntry, value) when is_binary(value) do
       %IPCIDRRouteEntry{ipCidrRouteEntry|ipCidrRouteMask: value}
     end
 
@@ -59,7 +59,7 @@ defmodule IPForward.IPCIDRRouteTable do
 
       SNMPMIB.object(oid, type, ipCidrRouteEntry.ipCidrRouteNextHop)
     end
-    def ipCidrRouteNextHop(ipCidrRouteNextHop, value) when is_binary(value) do
+    def ipCidrRouteNextHop(ipCidrRouteEntry, value) when is_binary(value) do
       %IPCIDRRouteEntry{ipCidrRouteEntry|ipCidrRouteNextHop: value}
     end
   end
